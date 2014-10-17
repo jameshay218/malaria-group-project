@@ -1,0 +1,71 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=2cm]{geometry}
+
+\usepackage[nodayofweek]{datetime}
+\longdate
+
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{\fancyplain{}{M.Sc.\ Group Project Report}}
+\rhead{\fancyplain{}{\today}}
+\cfoot{\fancyplain{}{\thepage}}
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps,.TIF}
+\graphicspath{ {./reportImages/} }
+
+
+\title{Title of your MSc Group Project\\\Large{--- Report One/Two ---}}
+\author{Student1, Student2, etc.\\
+       \{email1, email2, etc.\}@doc.ic.ac.uk\\ \\
+      \small{Supervisor: Dr.\ First Last}\\
+     \small{Course: CO530/533, Imperial College London}
+}
+
+\begin{document}
+
+\section{Designing for the Audience}
+The team contacted a number of organisations and inidividuals with potential data sources and expertise in the field, including individuals from the Faculty of Medicine, Imperial, and the London School of Hygeine and Tropical Medicine. The team met some of these experts and took minutes from these meetings to guide future development. Some image labelling and database features were considered redundant by the experts, and were therefore removed (eg. parasite life cycle stage). It was also suggested by one expert that a useful adaptation of the image database would be to quality check (QC) users on their diagnostic accuracy by presenting the user with a number of unlabelled images, scoring the user on how well their diagnosis matches the actual labelling. 
+
+The take home message from these meetings was that the primary aim of this project should be good proof of concept, high deployability and user friendliness. The software would be used by medical centres in the field, and therefore features and design should be secondary to practicality. The limited amount of data and accompanying labelling will also limit how much the neural network will be able to identify from a given image. The team will therefore continue to work with these ideas in mind, and will add the QC test to the database application.
+
+
+\section{Sourcing Sufficient Data}
+Sourcing digital blood slides proved to the biggest initial challenge that the team faced, as research and medical groups do not routeinely digitalise blood films. After pursuing a number of unsuccessful leads, it was confirmed by experts that there were no readily available digital datasets, and the team would need to gather data themselves. Progress was hampered further by the relevant London-based experts being out in the field for a few weeks.
+
+Once the team were able to meet with a few researchers, access to blood slides and a digital microscope were obtained. As it had taken so long to find a convenient source of slides, the team settled on using mouse data for proof of concept (as the slide preparation and parasitic features are the same as in human blood slides), and were then pressed to digitalise as many images as possible in a very short period of time (See Figure X). The amount of labelling to accompany each image was also not as great as the team had hoped. 
+%%KARUN PLEASE CAN YOU ADD THAT PHOTO YOU TOOK OF YOU GUYS IN THE LAB
+
+The team have also sourced some human blood films which can be digitalised should there be sufficient time. This
+has the potential to investigate the usefulness of neural networks in
+differentiating between different \emph{Plasmodium} species, as different species infect humans and mice. Lack of information regarding parasitic load and accompanying patient
+factors (such as location and age) mean that these labels cannot be added to the
+network as proposed in the original specification. Lifecycle stage
+will also not be added, as it was heard by experts that this
+information is not meaningful.
+
+\section{Quality Checking with the Database}
+Following discussions with experts in the field of malaria diagnosis,
+it was found that microscopists are regularly required to quality check their
+diagnostic accuracy. It was suggested that a very useful feature for
+an online database of malaria infected blood films would be to allow
+microscopists to formally check their accuracy online. An addition to
+the specification was therefore to add a quiz like feature to the
+database application - presenting the user with a number of unlabelled
+images, and scoring their accuracy against the database labels.
+
+\section{Database User Interface}
+The team decided to use the ``PyQt4'' package to build the user interface
+for the database user interface. This was largely due to the team's
+existing knowledge of Python, and the ease in which the front end
+could be interfaced with a psql database using the ``psycopg2''
+package. Whilst this user interface will prove to be useful as a stand
+alone piece of desktop software, an initial challenge was to integrate the
+Python database interface with the website. The limiting factor here
+was the team's knowledge of how to integrate python with the website. Other than the addition of a few optional features, the database UI prototype is completed and functional (See Figure X)
+%%NEED TO ADD SCREEN SHOT OF THE DATABASE IN ACTION
+
+
+\end{document}

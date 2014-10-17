@@ -1,0 +1,57 @@
+*****************************************************************************************
+Current Problems
+*****************************************************************************************
+
+"Diagnosis using stained blood films is time consuming and requires input from a highly-trained expert"
+
+References:
+- Tek et al., Computer vision for microscopy diagnosis of malaria. Malaria Journal 2009, 8:153. (6)
+
+
+"Malaria predominant in less developed, subtropical regions - often in rural areas with a lack of equipment and a particular lack of adequately trained technicians"
+
+References: 
+- Malaria Fact Sheet, World Health Organisation 2014. Available at http://www.who.int/mediacentre/factsheets/fs094/en/. Accessed 22/01/2014. (1)
+- M. Tumwebaze. Evaluation Of The Capacity To Appropriately Diagnose And Treat Malaria At Rural Health Centers In Kabarole District, Western Uganda. Health Policy and Development, 9(1):46{51, 2011. (5)
+
+
+"Laboratory misdiagnosis using microscopy-based methods is not uncommon"
+
+References:
+- Gautam AS, Sharma RC, Bhatt RM, Gupta DK: Microscopic diagnosis of malaria in Kheda district of Gujarat. Indian J Malariol 1992, 29:83-87.  (10)
+- Durrhelm DN, Becker PJ, Billinghurst K, Brink A: Diagnostic disagreement--the lessons learnt from malaria diagnosis in Mpumalanga. S Afr Med J 1997, 87:609-611. (11)
+
+"Rapid diagnostic tests have a higher detection threshold than blood film microscopy, and are therefore less sensitive"
+
+References:
+- Murray CK and Bennett JW. Rapid Diagnosis of Malaria. Interdiscip Perspect Infect Dis. 2009;415953 (12)
+
+"Other malaria detection methods may be slow and innaccurate (subjective diagnosis), expensive (molecular methods), or require specialised settings (PCR)"
+
+References:
+- Redd SC et al. Clinical algorithm for treatment of Plasmodium falciparum malaria in children. Lancet 1996;347(8996):223-7 (13)
+- Mens PF et al. Detection and identification of human Plasmodium species with real-time quantitative nucleic acid sequence-based amplification. Malar J. 2006;5:80 (14)
+
+
+"Reagent storage requirements make rapid diagnostic tests impractical in the field"
+
+Reference:
+Same as Murray and Bennett above. (12)
+
+
+*****************************************************************************************
+Benefits
+*****************************************************************************************
+"Earlier diagnosis allows for more successful treatment and helps reduce the spread of disease"
+Reference: 
+-Malaria Treatment, World Health Organisation, http://www.who.int/malaria/areas/treatment/en/. Accessed 22/01/2014. (15)
+
+"Could be used in a rural setting, only requiring a computer and microscope"
+
+"Reduces the need for a specialist trained in malaria diagnosis where such an opinion is unattainable"
+
+"Could reduce the workload of a trained microscopist in the majority of cases through providing a fast and reliable classification"
+
+"Software could collect data to store in a central database"
+
+"Can be used in conjunction with other diagnostic techniques (eg. antigen testing) to clarify uncertain cases"

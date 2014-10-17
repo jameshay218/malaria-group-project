@@ -1,0 +1,100 @@
+Slide ID (there will be multiple images on the database corresponding to the same slide)
+       - Lab/Owner of the image
+       - Upload date
+       - Positive/negative for infection (more for the purpose of the recognition software)   
+       - Species (allow user to search for human or mouse samples, for example)
+       - Strain (eg. falciparum, vivax)
+       - Latest identified stage (eg. gametocyte)
+       - Parasitic count (it would be useful to get an idea of range for this)
+       - Image zoom (microscope zoom)
+       - Volume of sample (estimated volume of blood on the slide, unless this is something that we could calculate using the recognition software itself, based on, for example, number of WBCs)
+       - Type of staining used (eg. Giemsa or other)
+       - Other comments (would it be useful to allow an uploader to attach additional comments to clarify any unusual features?)
+
+
+
+Query for
+
+Pos/Neg:
+SELECT * FROM Malaria
+WHERE Status=‘Positive’;
+
+SELECT * FROM Malaria
+WHERE Status=‘Negative’;
+
+Species:
+SELECT * FROM Malaria
+WHERE Species=‘Human’;
+
+SELECT * FROM Malaria
+WHERE Species=‘Mouse’;
+
+Strain:
+SELECT * FROM Malaria				— Could use SELECT * FROM Malaria
+WHERE Strain=‘Falciparum’;				    WHERE Strain=‘Falciparum’	
+							    OR Strain=‘Vivax’;
+SELECT * FROM Malaria
+WHERE Strain=‘Vivax’;
+
+Identified Stage:
+SELECT * FROM Malaria
+WHERE Stage=‘Gametocyte’;
+
+Parasitic Count:
+SELECT * FROM Malaria
+WHERE Count BETWEEN 0 AND 100;
+
+Type of staining:
+SELECT * FROM Malaria
+WHERE Stain=‘Giemsa’;
+
+Upload date:
+SELECT * FROM Malaria
+WHERE DATE >2013;
+
+or equals or between
+
+
+Lab/Owner:
+SELECT * FROM Malaria
+WHERE Status=‘Joe Bloggs’;
+-use a drop down 
+
+
+
+
+———————————————————————————————————————————————————————————
+
+FOR INSERTING:
+
+INSERT INTO Malaria (Unique ID, Status, Species, etc, etc)
+VALUES (101, ‘Positive’, ‘Human’, ‘etc’, ‘etc’);
+
+
+FOR EDIT:
+
+UPDATE malaria
+SET Status=‘Positive’
+WHERE UniqueID=101;
+
+
+FOR DELETE:
+
+DELETE FROM Malaria
+Where UniqueID=101;
+
+
+Batch as many together as desired with semicolons
+
+———————————————————————————————————————————————————————————
+
+FOR USING PARAMETERS:
+
+txtNam = getRequestString("CustomerName");
+txtAdd = getRequestString("Address");
+txtCit = getRequestString("City");
+txtSQL = "INSERT INTO Customers (CustomerName,Address,City) Values(@0,@1,@2)";
+db.Execute(txtSQL,txtNam,txtAdd,txtCit);
+
+
+

@@ -1,0 +1,12 @@
+username is ng1513
+password is 'MalariaTeam2014'
+
+table malariamain
+
+CREAT TABLE malariamain(id SERIAL PRIMARY KEY, lab VARCHAR(30), class
+classification, species VARCHAR(30), strain VARCHAR(30), count INT(9),
+zoom INT(9), slideid VARCHAR(30), comments TEXT);
+
+
+CREATE TABLE malariaimage(id SERIAL references malariamain(id),
+byte_array BYTEA);

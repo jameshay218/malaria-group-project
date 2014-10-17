@@ -1,0 +1,21 @@
+Malaria is a highly prevalent infectious disease caused by a peripheral Plasmodium blood parasite. With an estimated 207 million cases resulting in an estimated 627,000 deaths in 2012 alone, malaria has become widely recognised as one of the world's main health problems.(1) This high prevalence and mortality has put halting and reversing the incidence of malaria as one of the World Health Organisation's (WHO) millenium development goals.(2) 
+
+The majority of cases occur in some of the world's poorest regions, particularly in sub-Saharan Africa, as well as Asia, Latin America, the Middle East and some parts of Europe.(1) As such, there is a disparity between the distribution of resources and expertise required to diagnose malaria and of malaria infections. Early diagnosis and treatment of malaria reduces disease progression and helps to reduce the transmission and spread of the disease, necessitating a cheap, fast and accurate diagnostic tools which can be used untrained individuals with limited resources.
+
+The current 'gold standard' in malaria diagnosis is to manually search for the Plasmodium parasite using a Giemsa stained thin or thick blood film viewed under a microscope.(3) This is a time consuming process, requiring a highly trained technician to accurately identify the parasite amongst non-parasitic stained components (eg. red blood cells, platelets, artifacts). Furthermore, the microscopist must then clasify the strain and stage of the parasite. Whilst there is a shortage of equipment in less developed regions, the lack of expertise is even more apparent. A recent survey in Uganda found 50% of rural health centres to have a microscope, but only 17% to have appropriately trained laboratory technicians.(4)
+
+It is therefore unsurprising that there has been a considerable amount of research into automating malaria diagnosis using pattern recognition algorithms, crowd sourcing and computer vision. (5, 6) However, these studies have been primarily focused on thin blood films, with the amount of research into automatic systems using thick blood films relatively lacking. It is clear that malaria diagnostics would benefit hugely from an accurate and practical system for detection and classification of malaria parasites on thick blood films complemented by a large and expandable database. An automated system would allow for a blood film to be diagnosed quickly without the need for a train technician, and a centralised database of blood film images would allow future techniques to be improved using an ever increasing data set. Whilst this requirement is particularly applicable in malaria, such a system would be useful in any disease area where time or training are limiting factors when using visual diagnostic techniques.
+
+
+
+1. Malaria Fact Sheet, World Health Organisation 2014. Available at http://www.who.int/mediacentre/factsheets/fs094/en/. Accessed 22/01/2014.
+2. WHO Millennium Development Goals, World Health Organisation 2014. Available at http://www.who.int/topics/millennium_development_goals/en/. Accessed 22/01/2014.
+3. WHO: Basic malaria microscopy, 2nd edition. WHO Press, 2010.
+4. M. Tumwebaze. Evaluation Of The Capacity To Appropriately Diagnose And Treat Malaria At Rural Health Centers In Kabarole District, Western Uganda. Health Policy and Development, 9(1):46{51, 2011.
+5. Tek et al., Computer vision for microscopy diagnosis of malaria. Malaria Journal 2009, 8:153.
+7. Kaewkamnerd et al. BMC Bioinformatics 2012, 13(Suppl 17):S18.
+	Available at http://www.biomedcentral.com/1471-2105/13/S17/S18
+6. www.malariaspot.org
+
+
+

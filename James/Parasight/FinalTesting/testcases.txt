@@ -1,0 +1,52 @@
+REPEAT EACH TEST AFTER PRESSING THE RESET BUTTON
+
+Success
+Success if success == "Success"
+Insertion
+- try for png, jpg and jpeg
+- Test reset button
+- Upload same image with same labels
+
+
+Failure
+If success != "Success"
+Insertion
+-All blank (
+-Slides ID contains semi colons
+- Comments contain semi colon
+- Only one field not filled in correctly
+- Attempt to set count or zoom outside of range (0-1 / 1 to 1000000)
+- Try non valid file types
+- Try making slideID and comments too big
+- Should not be able to insert with LSHTM, as too long
+
+
+Browser
+	Search
+	Success if message as expected ("Success")
+- Search for all images
+- Set search fields to match an image that is known to exist
+- Search for image that definitely does not exist
+- Try semi colons in text edits
+- Test inclusive ranges (ie. zoom upper and lower bound both 63)
+- Search based on only 1 field at a time
+
+
+  	 Search
+	 Failure if message is not as expected ("Invalid parameters")
+- Search with semi colon in comments
+- Make comments
+- Fill up text edit (we know it fails)
+
+
+       Location
+       Success (click download, should allow it)
+- If valid directory
+- Empty folder
+- Folder with some different images in
+
+  	 Failure
+- Invalid directory (type gibberish)
+- Leaving it unchanged
+- Trying to overwrite images should give a warning box for each
+attempted overwrite

@@ -1,0 +1,108 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=2cm]{geometry}
+
+\usepackage[nodayofweek]{datetime}
+\longdate
+
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{\fancyplain{}{M.Sc.\ Group Project Report}}
+\rhead{\fancyplain{}{\today}}
+\cfoot{\fancyplain{}{\thepage}}
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps,.TIF}
+\graphicspath{ {./reportImages/} }
+
+
+\title{Title of your MSc Group Project\\\Large{--- Report One/Two ---}}
+\author{Student1, Student2, etc.\\
+       \{email1, email2, etc.\}@doc.ic.ac.uk\\ \\
+      \small{Supervisor: Dr.\ First Last}\\
+     \small{Course: CO530/533, Imperial College London}
+}
+
+\begin{document}
+
+\section{Designing for the Audience}
+It was agreed early on that a project with potential medical application would require a large amount of expert input. Futhermore, one of the biggest challenges that the team faced from the offset was obtaining a large number of digitalised blood films. The team therefore contacted a number of organisations and inidividuals with potential data sources and expertise in the field: Dr Miguel Luengo-Oroz with MalariaSpot.org; Professor Adyogan Ozcan with the Ozcan Research Group, UCLA; Dr. Thomas Churcher, Faculty of Medicine, Imperial College; Dr. Andrew Blagborough, Faculty of Natural Sciences, Imperial College; and Dr. Chris Drakeley, Director of the Malaria Centre, London School of Hygeine and Tropical Medicine. 
+
+<< Put picture from LSHTM here >>
+
+The majority of experts were interested in the project, and meetings were set up with Dr. Churcher, Dr. Blagborough (who was met through Dr. Churcher) and Dr. Drakeley. The following points were gleaned from these meetings:
+
+\begin{itemize}
+	\item The first point that became apparent was that research and teaching groups do not routinely digitalise and archive digitalised blood films as the team had hoped. Dr. Blagborough and Dr. Drakeley confirmed whilst blood films were not kept digitally, there were large numbers of archived blood film slides that could be photographed (see below). 
+
+	\item The experts suggested that chemical, rapid diagnostic tests (RDTs) had advanced significantly and were arguable the most useful "quick and dirty" tests in the field, and that PCR analysis of DNA was used to give the most reliable diagnostic results. However, the experts noted the ease in which the group's software could be deployed and used by any centre with a microscope. There was some skeptisism as to whether diagnostic software could replace a well trained microscopist, but the experts agreed with the team that this would be a very useful addition and proof of concept to the field.
+
+	\item The experts suggested that such software might be of particular use in regions where malaria is near eradication. Such regions require very high throughput of largely negative images to identify the rare, remaining cases. Such regions would lack demand for and therefore availability of someone skilled in "reading slides".
+
+	\item Dr. Blagborough stated that it would be very useful for his group to have software that counted the number of parasites on a blood slide. The group highlighted that accurate counts would not be easy to obtain using the neural network.
+
+	\item It was agreed that it would be useful to develop software that identifies parasite strain, as this can be difficult for relatively inexperienced microscopists. The grroup agreed that this would be possible, though success would be limited by data availability. The project will remain focused on differentiating between positive/negative slides, though would investigate strain differentiation depending on time.
+
+	\item It was noted that identifying stage of infection was largely meaningless, as an infected blood film would be expected to contain parasites at all life cycle stages. This aim was therefore removed from the project.
+
+	\item The usefulness of a centralised database of blood film images was also discussed with experts. It was suggested by Dr. Drakeley that an online repository of blood film images could be very useful to the medical community, as diagnosticians are required to maintain and be tested for a certain level of accuracy when diagnosing blood slides. It was suggested that the database could therefore be adapated to quality check (QC) users on their diagnostic accuracy by presenting the user with a number of unlabelled images, scoring the user on how well their diagnosis matches the actual labelling. The team agreed that this addition could be made to the database.
+
+\end{itemize}
+
+The take home message from these meetings was that the primary aim of this project should be good proof of concept, high deployability and user friendliness. The software would be used by medical centres in the field, and therefore features and design should be secondary to practicality. The limited amount of data and accompanying labelling will also limit how much the neural network will be able to identify from a given image. The team will therefore continue to work with these ideas in mind, and will add the QC test to the database application.
+
+
+\section{Data Collection}
+
+The contacted expert groups would be unable to help digitalise archived slides themselves, Dr. Blagborough kindly volunteered use of the facilities in his lab for the team to come and digitalise the slides themselves. Dr. Blagborough's lab is interested in the testing of anti-malarial drugs on mouse specific strains of malaria. Whilst the ultimate aim of the project would be to train the network on human data, it was agreed that the availability and convenience of the lab meant that training the network on these readily available mouse blood films would be a sensible approach. This decision is further justified by the fact that these blood films are prepared in exactly the same way as in the field, and the blood cells and parasites on the film will be almost identical to those seen in human slides. Furthermore, Dr. Drakeley kindly volunteered a book of human blood slides should we require them. The team agreed that the network could be further trained on these slides if and when the network was successfull trained on the mouse slides.
+
+The team visited the Dr. Blagborough's lab in Imperial a number of times in 3 hour shifts to photograph as many positive and negative mouse blood slides as possible, coming away with approximately 500 positive and 500 negative digital images. This process involved mounting, focusing and snapshotting various points on the blood slide. It took the team a bit of time to familiarise themselves with the equipment and slides, but every member of the group soon became proficient in taking these images.
+
+<<Put image of us taking pictures here>>
+
+With a solid dataset, the team agreed that data collection could be put on hold until other aspects of the project had progressed sufficiently. Dr. Blagborough volunteered his lab equipment for the team to digitalise the human blood slides provided by Dr. Drakeley should the project reach this point.
+
+
+\section{Sourcing Sufficient Data}
+As discussed above, sourcing digital blood slides proved to the biggest initial challenge that the team faced. Research and medical groups do not have any reason to record digital copies of their slides, and the team were therefore required to contact a large number of groups before a data sources were found. One group that had researched the usefulness of gamifying malaria diagnosis had a large number of images embedded in an online game. The team were granted permission to scape this website for images, and a script was written to automate this process. However, the images were not particularly useful, and the website owners were unable to send the team their data directly. 
+
+It was soon confirmed by experts that there were no readily available digital datasets, and the team would need to gather data themselves. Progress was hampered further by the  relevant London-based experts being out in the field for a few weeks. However, once the team were able to meet with a few researchers, access to blood slides and a digital microscope were obtained. As it had taken so long to find a convenient source of slides, the team settled on using mouse data for proof of concept (as the slide preparation and parasitic features are the same as in human blood slides), and were then pressed to digitalise as many images as possible in a very short period of time. The amount of labelling to accompany each image was also not as great as the team had hoped. 
+
+The team has therefore settled on using mouse blood slides as proof of
+concept in diagnosing whether an individual is positive or negative
+for malaria infection. The team have also sourced some human blood
+films which can be digitalised should there be sufficient time. This
+has the potential to investigate the usefulness of neural networks in
+differentiating between different \emph{Plasmodium} species, as it is
+a different species of \emph{Plasmodium} that infects mice compared to
+humans. The lack of image labelling will also limit the amount of
+information that the neural network will be able to provide on a new
+image. Information regarding parasitic load and accompanying patient
+factors (such as location and age) will therefore not be added to the
+network as proposed int he original specification. Lifecycle stage
+will also not be added, as it was heard by experts that this
+information is not meaningful.
+
+\section{Quality Checking with the Database}
+Following discussions with experts in the field of malaria diagnosis,
+it was found that microscopists are regularly required to quality check their
+diagnostic accuracy. It was suggested that a very useful feature for
+an online database of malaria infected blood films would be to allow
+microscopists to formally check their accuracy online. An addition to
+the specification was therefore to add a quiz like feature to the
+database application - presenting the user with a number of unlabelled
+images, and scoring their accuracy against the database labels.
+
+\section{Database User Interface}
+The team decided to use the ``PyQt4'' package to build the user interface
+for the database user interface. This was largely due to the team's
+existing knowledge of Python, and the ease in which the front end
+could be interfaced with a psql database using the ``psycopg2''
+package. Whilst this user interface will prove to be useful as a stand
+alone piece of desktop software, an initial challenge was to integrate the
+Python database interface with the website. The limiting factor here
+was the team's knowledge of how to integrate python with a website. %???? 
+
+
+\end{document}

@@ -1,0 +1,24 @@
+Image Uploader Tests
+
+edge11% python databasetest.py -v
+test_reset (__main__.TestUploader) ... ok
+test_upload_failure1_blankfields (__main__.TestUploader) ... ok
+test_upload_failure2_semicolon1 (__main__.TestUploader) ... ok
+test_upload_failure3_semicolon2 (__main__.TestUploader) ... ok
+test_upload_failure4_blankfield (__main__.TestUploader) ... ok
+test_upload_failure5_outofrange1 (__main__.TestUploader) ... ok
+test_upload_failure6_outofrange2 (__main__.TestUploader) ... ok
+test_upload_failure7_outofrange3 (__main__.TestUploader) ... ok
+test_upload_failure8_invalidfile (__main__.TestUploader) ... ok
+test_upload_failure9_fieldtoolong (__main__.TestUploader) ... ok
+test_upload_success1_jpeg (__main__.TestUploader) ... ok
+test_upload_success2_png (__main__.TestUploader) ... ok
+test_upload_success3_jpg (__main__.TestUploader) ... ok
+test_upload_success4_blankoptionalfields (__main__.TestUploader) ... ok
+test_upload_success5_identicalimage (__main__.TestUploader) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 2.385s
+
+OK
+
